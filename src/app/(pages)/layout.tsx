@@ -1,3 +1,4 @@
+import Footer from "@/components/footer/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,5 +11,10 @@ export default function pageLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div className="flex w-full h-screen">{children}</div>;
+  return (
+    <div className="flex w-full h-screen relative">
+      {children}
+      <Footer />
+    </div>
+  );
 }
